@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinSpawnerScript : MonoBehaviour
+public class GoblinSpawner : MonoBehaviour
 {
     [SerializeField] private Goblin _goblin;
     [SerializeField] private Transform _motherGoblin;
+
     private Transform[] _goblinHoles;
     private WaitForSeconds _waitTwoSeconds = new WaitForSeconds(2);
     private System.Random _random = new System.Random();
 
-    void Start()
+    private void Start()
     {
         _goblinHoles = new Transform[_motherGoblin.childCount];
 
